@@ -1,260 +1,170 @@
 import { Header } from "@/components/header"
+import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Clock, Camera, Shirt, Heart, AlertTriangle } from "lucide-react"
+import { Clock, Camera, Heart, Users, Phone, Shield } from "lucide-react"
 
 export default function InformationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-50">
+    <div className="min-h-screen bg-secondary">
       <Header />
 
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Page Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">Informasi Pengunjung</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto text-pretty">
-              Panduan dan informasi penting untuk mengunjungi Pura Dang Khayangan Cagar Budaya Pengukur-ukuran
-            </p>
+      <main className="container mx-auto px-4 py-12">
+        {/* Page Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground text-balance">
+            Informasi <span style={{ color: '#B59410' }}>Pengunjung</span>
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
+            Semua yang perlu Anda ketahui untuk merencanakan kunjungan yang lancar dan penuh hormat.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
+          {/* Main Information Column */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* Visiting Hours */}
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Clock className="w-6 h-6" style={{ color: '#B59410' }} />
+                  <span className="text-2xl font-bold">Jam Kunjungan</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="grid md:grid-cols-2 gap-6 text-sm">
+                <div>
+                  <h4 className="font-semibold mb-2 text-foreground">Hari Operasional</h4>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li className="flex justify-between"><span>Senin - Minggu</span> <strong>06:00 - 18:00 WITA</strong></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2 text-foreground">Hari Raya Hindu</h4>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li className="flex justify-between"><span>Galungan, Kuningan, dll.</span> <strong>05:00 - 20:00 WITA</strong></li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Visitor Guidelines */}
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Heart className="w-6 h-6" style={{ color: '#B59410' }} />
+                  <span className="text-2xl font-bold">Etika & Aturan Berpakaian</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="grid md:grid-cols-2 gap-6 text-sm">
+                <div>
+                  <h4 className="font-semibold mb-2 text-foreground">Pakaian Pengunjung</h4>
+                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                    <li>Kenakan pakaian yang sopan (menutup bahu dan lutut).</li>
+                    <li>Sarung dan selendang diwajibkan di area suci.</li>
+                    <li>Sarung tersedia untuk disewa di lokasi.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2 text-foreground">Perilaku di Pura</h4>
+                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                    <li>Jaga ketenangan dan bicara dengan suara rendah.</li>
+                    <li>Hormati area yang ditandai khusus untuk peribadatan.</li>
+                    <li>Dilarang menyentuh artefak atau struktur pura.</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Photography Rules */}
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Camera className="w-6 h-6" style={{ color: '#B59410' }} />
+                  <span className="text-2xl font-bold">Aturan Fotografi</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 text-sm">
+                <p className="text-muted-foreground">
+                  Kami mempersilakan Anda mengabadikan momen, namun mohon perhatikan aturan berikut untuk menghormati kesucian pura.
+                </p>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  <div className="bg-green-100 dark:bg-green-900/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">Diizinkan</h4>
+                    <ul className="list-disc list-inside text-gray-800 dark:text-gray-300 text-sm space-y-1">
+                      <li>Area luar dan arsitektur</li>
+                      <li>Tanpa menggunakan flash</li>
+                      <li>Penggunaan ponsel</li>
+                    </ul>
+                  </div>
+                  <div className="bg-yellow-100 dark:bg-yellow-900/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-yellow-800 dark:text-yellow-300 mb-2">Perlu Izin</h4>
+                    <ul className="list-disc list-inside text-gray-800 dark:text-gray-300 text-sm space-y-1">
+                      <li>Penggunaan tripod</li>
+                      <li>Sesi foto komersial</li>
+                      <li>Drone (izin khusus)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-red-100 dark:bg-red-900/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-800 dark:text-red-300 mb-2">Dilarang</h4>
+                    <ul className="list-disc list-inside text-gray-800 dark:text-gray-300 text-sm space-y-1">
+                      <li>Foto saat peribadatan</li>
+                      <li>Area suci terdalam</li>
+                      <li>Mengganggu umat</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Visiting Hours */}
-          <Card className="mb-8 border-cyan-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <Clock className="h-6 w-6" />
-                Jam Kunjungan
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-semibold text-lg mb-3 text-gray-900">Hari Biasa</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Senin - Jumat</span>
-                      <span className="font-medium">08:00 - 17:00</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Sabtu - Minggu</span>
-                      <span className="font-medium">07:00 - 18:00</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-3 text-gray-900">Hari Khusus</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Purnama & Tilem</span>
-                      <span className="font-medium">06:00 - 19:00</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Galungan & Kuningan</span>
-                      <span className="font-medium">05:00 - 20:00</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          {/* Side Information Column */}
+          <div className="space-y-8">
+            {/* Entrance Fees */}
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Users className="w-6 h-6" style={{ color: '#B59410' }} />
+                  <span className="text-xl font-bold">Biaya Masuk</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm space-y-2">
+                <div className="flex justify-between text-muted-foreground"><span>Dewasa (Lokal)</span> <strong className="text-foreground">Rp 10.000</strong></div>
+                <div className="flex justify-between text-muted-foreground"><span>Anak-anak (Lokal)</span> <strong className="text-foreground">Rp 5.000</strong></div>
+                <div className="flex justify-between text-muted-foreground"><span>Wisatawan Asing</span> <strong className="text-foreground">Rp 25.000</strong></div>
+                <p className="text-xs pt-2" style={{ color: '#B59410' }}>*Gratis bagi yang bertujuan untuk beribadah.</p>
+              </CardContent>
+            </Card>
 
-          {/* Dress Code */}
-          <Card className="mb-8 border-indigo-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <Shirt className="h-6 w-6" />
-                Aturan Berpakaian & Persyaratan
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-semibold text-lg mb-3 text-gray-900">Pakaian yang Diperlukan</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Sarung tradisional Bali (tersedia untuk disewa)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Pakaian sopan menutupi bahu dan lutut</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Penampilan bersih dan sopan</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Lepaskan sepatu sebelum memasuki area suci</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-3 text-gray-900">Tidak Diizinkan</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Celana pendek, rok mini, atau pakaian terbuka</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Baju tanpa lengan atau tank top</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Sandal jepit di area suci</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Topi di dalam bangunan pura</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+            {/* Contact */}
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Phone className="w-6 h-6" style={{ color: '#B59410' }} />
+                  <span className="text-xl font-bold">Informasi & Kontak</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm space-y-2">
+                <p className="text-muted-foreground"><strong>Telepon:</strong> (0361) 123-4567</p>
+                <p className="text-muted-foreground"><strong>Email:</strong> info@puradangkhayangan.id</p>
+              </CardContent>
+            </Card>
 
-          {/* Visitor Guidelines */}
-          <Card className="mb-8 border-emerald-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <Heart className="h-6 w-6" />
-                Panduan Perilaku Hormat
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="font-semibold text-lg mb-3 text-gray-900">Yang Harus Dilakukan</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Jaga ketenangan dan sikap hormat</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Ikuti jalur jalan yang telah ditentukan</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Minta izin sebelum memotret orang</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Berpartisipasi dengan hormat dalam upacara jika diundang</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Jaga kebersihan lingkungan pura</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-3 text-gray-900">Yang Tidak Boleh Dilakukan</h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Menyentuh benda atau patung suci</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Mengarahkan kaki ke area suci</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Menggunakan flash saat upacara</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Memanjat struktur pura</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Membawa makanan atau minuman ke area suci</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Photography Rules */}
-          <Card className="mb-8 border-amber-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-amber-500 to-orange-600 text-white">
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <Camera className="h-6 w-6" />
-                Panduan Fotografi
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-3 gap-6">
-                <div>
-                  <Badge className="bg-green-100 text-green-800 mb-3">Diizinkan</Badge>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Arsitektur pura</li>
-                    <li>• Taman dan lanskap</li>
-                    <li>• Artefak budaya (tanpa flash)</li>
-                    <li>• Foto pribadi di area yang ditentukan</li>
-                  </ul>
-                </div>
-                <div>
-                  <Badge className="bg-yellow-100 text-yellow-800 mb-3">Minta Izin</Badge>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Masyarakat lokal dan pemangku</li>
-                    <li>• Peserta upacara</li>
-                    <li>• Di dalam bangunan pura</li>
-                    <li>• Upacara suci</li>
-                  </ul>
-                </div>
-                <div>
-                  <Badge className="bg-red-100 text-red-800 mb-3">Dilarang</Badge>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Flash saat upacara</li>
-                    <li>• Tempat suci bagian dalam</li>
-                    <li>• Area doa pribadi</li>
-                    <li>• Fotografi komersial tanpa izin</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Important Notices */}
-          <Card className="border-red-200 shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-red-500 to-pink-600 text-white">
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <AlertTriangle className="h-6 w-6" />
-                Pemberitahuan Penting
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="space-y-4">
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-red-800 mb-2">Hari Upacara</h3>
-                  <p className="text-red-700">
-                    Selama upacara keagamaan, area tertentu mungkin dibatasi hanya untuk umat. Harap hormati batasan
-                    ini dan ikuti arahan staf.
-                  </p>
-                </div>
-                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-amber-800 mb-2">Pertimbangan Cuaca</h3>
-                  <p className="text-amber-700">
-                    Pura mungkin ditutup selama kondisi cuaca buruk. Periksa kondisi saat ini sebelum berkunjung,
-                    terutama selama musim hujan.
-                  </p>
-                </div>
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h3 className="font-semibold text-blue-800 mb-2">Tur Berpemandu</h3>
-                  <p className="text-blue-700">
-                    Tur berpemandu gratis tersedia setiap hari pada pukul 09:00, 13:00, dan 16:00. Tur dilakukan dalam
-                    bahasa Indonesia dan Inggris.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+            {/* Emergency */}
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Shield className="w-6 h-6" style={{ color: '#B59410' }} />
+                  <span className="text-xl font-bold">Kontak Darurat</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm space-y-2">
+                <p className="text-muted-foreground"><strong>Polsek Terdekat:</strong> (0361) 234-5678</p>
+                <p className="text-muted-foreground"><strong>Ambulans:</strong> 118</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
+      <Navigation currentPage="/information" />
     </div>
   )
 }

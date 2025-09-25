@@ -1,17 +1,17 @@
 import { Header } from "@/components/header"
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Clock, Car, Bus } from "lucide-react"
+import { MapPin, Clock, Car, Bus, Trees, ShoppingBasket, Mountain } from "lucide-react"
 
 export default function LocationPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-secondary">
       <Header />
 
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground text-balance">Lokasi Pura</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground text-balance">Lokasi Pura<span style={{ color: '#B59410' }}> Dang Khayangan</span></h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
             Temukan jalan Anda ke Pura Dang Khayangan Cagar Budaya Pengukur-ukuran
           </p>
@@ -23,7 +23,7 @@ export default function LocationPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-2xl font-bold mb-4 text-foreground">Posisi Geografis</h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-6 text-justify">
                   Pura Dang Khayangan Cagar Budaya Pengukur-ukuran berlokasi strategis di jantung wilayah budaya Bali,
                   terletak di antara lanskap tropis yang rimbun yang meningkatkan suasana spiritualnya. Pura ini berada
                   di tanah yang lebih tinggi, menawarkan pengunjung pemandangan panorama sawah terasering dan desa-desa
@@ -83,102 +83,87 @@ export default function LocationPage() {
         </Card>
 
         {/* Transportation Options */}
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <Card>
-            <CardContent className="p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <Car className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-foreground">Dengan Kendaraan Pribadi</h2>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-semibold mb-2">Dari Denpasar (45 menit)</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Ambil Jalan Bypass Ngurah Rai ke utara, lalu ikuti rambu ke Pengukur-ukuran. Parkir tersedia di
-                    lokasi.
-                  </p>
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-foreground text-center">Opsi Transportasi</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 rounded-full" style={{ backgroundColor: 'rgba(181, 148, 16, 0.1)' }}>
+                    <Car className="h-6 w-6" style={{ color: '#B59410' }} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Kendaraan Pribadi</h3>
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Dari Ubud (30 menit)</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Menuju ke timur di Jalan Raya Ubud, lalu ke selatan di Jalan Pengukur-ukuran. Rambu jalan yang
-                    jelas akan memandu jalan.
-                  </p>
+                <div className="space-y-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold mb-1">Dari Denpasar (45 menit)</h4>
+                    <p className="text-muted-foreground">Ambil Jalan Bypass Ngurah Rai ke utara, ikuti rambu ke Pengukur-ukuran. Parkir tersedia di lokasi.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Dari Ubud (30 menit)</h4>
+                    <p className="text-muted-foreground">Menuju ke timur di Jalan Raya Ubud, lalu ke selatan di Jalan Pengukur-ukuran.</p>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
 
-          <Card>
-            <CardContent className="p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <Bus className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-foreground">Transportasi Umum</h2>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-semibold mb-2">Layanan Bus Lokal</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Naik bus Trans Sarbagita ke terminal Pengukur-ukuran, lalu berjalan kaki 10 menit ke pintu masuk
-                    pura.
-                  </p>
+            <Card className="hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 rounded-full" style={{ backgroundColor: 'rgba(181, 148, 16, 0.1)' }}>
+                    <Bus className="h-6 w-6" style={{ color: '#B59410' }} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Transportasi Umum</h3>
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-2">Shuttle Wisata</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Layanan antar-jemput harian tersedia dari hotel-hotel besar di Denpasar dan Ubud. Disarankan
-                    memesan terlebih dahulu.
-                  </p>
+                <div className="space-y-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold mb-1">Layanan Bus Lokal</h4>
+                    <p className="text-muted-foreground">Naik bus Trans Sarbagita ke terminal Pengukur-ukuran, lalu berjalan kaki 10 menit ke pura.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Shuttle Wisata</h4>
+                    <p className="text-muted-foreground">Layanan antar-jemput tersedia dari hotel besar di Denpasar dan Ubud. Disarankan memesan dahulu.</p>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         {/* Nearby Attractions */}
-        <Card className="mb-8">
-          <CardContent className="p-8">
-            <h2 className="text-2xl font-bold mb-6 text-foreground text-center">Atraksi Terdekat</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+        <Card className="mb-8 shadow-lg">
+          <CardContent className="p-10">
+            <h2 className="text-3xl font-bold mb-8 text-foreground text-center">
+              Atraksi <span style={{ color: '#B59410' }}>Terdekat</span>
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="relative h-40 rounded-lg overflow-hidden mb-4">
-                  <img
-                    src="/placeholder.svg?key=attr1"
-                    alt="Sawah terasering tradisional Bali"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(181, 148, 16, 0.1)' }}>
+                  <Trees className="w-10 h-10" style={{ color: '#B59410' }} />
                 </div>
-                <h3 className="font-semibold mb-2">Sawah Terasering Jatiluwih</h3>
+                <h3 className="font-semibold mb-2 text-lg">Sawah Terasering Jatiluwih</h3>
                 <p className="text-muted-foreground text-sm">
-                  Sawah terasering Warisan Dunia UNESCO, 15 menit berkendara dari pura
+                  Warisan Dunia UNESCO, 15 menit berkendara dari pura.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="relative h-40 rounded-lg overflow-hidden mb-4">
-                  <img
-                    src="/placeholder.svg?key=attr2"
-                    alt="Desa tradisional Bali"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(181, 148, 16, 0.1)' }}>
+                  <Mountain className="w-10 h-10" style={{ color: '#B59410' }} />
                 </div>
-                <h3 className="font-semibold mb-2">Desa Pengukur-ukuran</h3>
+                <h3 className="font-semibold mb-2 text-lg">Desa Pengukur-ukuran</h3>
                 <p className="text-muted-foreground text-sm">
-                  Rasakan kehidupan desa Bali yang otentik dan kerajinan tradisional
+                  Rasakan kehidupan desa Bali yang otentik dan kerajinan tradisional.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="relative h-40 rounded-lg overflow-hidden mb-4">
-                  <img
-                    src="/placeholder.svg?key=attr3"
-                    alt="Pasar seni tradisional Bali"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: 'rgba(181, 148, 16, 0.1)' }}>
+                  <ShoppingBasket className="w-10 h-10" style={{ color: '#B59410' }} />
                 </div>
-                <h3 className="font-semibold mb-2">Pasar Seni Lokal</h3>
+                <h3 className="font-semibold mb-2 text-lg">Pasar Seni Lokal</h3>
                 <p className="text-muted-foreground text-sm">
-                  Jelajahi kerajinan tangan tradisional dan karya seni lokal, 5 menit berjalan kaki
+                  Jelajahi kerajinan tangan dan karya seni lokal, 5 menit berjalan kaki.
                 </p>
               </div>
             </div>
