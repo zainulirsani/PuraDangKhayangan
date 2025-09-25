@@ -6,7 +6,7 @@ export function Header() {
         <div className="flex items-center space-x-2">
           <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
             <img
-              src="/logo.png"
+              src="/Logo.png"
               alt="Pura Dang Khayangan Cagar Budaya Pengukur-ukuran"
               className="w-full h-full object-cover"
             />
