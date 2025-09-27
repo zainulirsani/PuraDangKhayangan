@@ -5,10 +5,12 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-}
+  title: {
+    default: "Pura Heritage Site",
+    template: "%s | Pura Heritage Site",
+  },
+  description: "Jelajahi kekayaan warisan budaya Pura Dang Khayangan Cagar Budaya Pengukur-ukuran, sebuah pura suci yang berdiri sebagai bukti kemahiran arsitektur Bali dan pengabdian spiritual.",
+};
 
 export default function RootLayout({
   children,

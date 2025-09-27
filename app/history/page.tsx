@@ -3,6 +3,10 @@ import { Navigation } from "@/components/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { ScrollText, PencilRuler, BookOpen } from "lucide-react" // Menggunakan ikon yang relevan
 
+export const metadata = {
+  title: "Sejarah",
+};
+
 export default function HistoryPage() {
   return (
     <div className="min-h-screen bg-secondary">

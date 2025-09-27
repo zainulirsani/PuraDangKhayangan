@@ -3,6 +3,10 @@ import { Navigation } from "@/components/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Clock, Car, Bus, Trees, ShoppingBasket, Mountain } from "lucide-react"
 
+export const metadata = {
+  title: "Lokasi",
+};
+
 export default function LocationPage() {
   return (
     <div className="min-h-screen bg-secondary">

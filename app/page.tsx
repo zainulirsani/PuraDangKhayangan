@@ -4,6 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 // Impor ikon yang sudah diperbaiki
 import { Landmark, ScrollText, Leaf } from "lucide-react"
 
+export const metadata = {
+  title: "Beranda",
+};
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-secondary">

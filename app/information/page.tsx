@@ -3,6 +3,10 @@ import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Clock, Camera, Heart, Users, Phone, Shield } from "lucide-react"
 
+export const metadata = {
+  title: "Informasi",
+};
+
 export default function InformationPage() {
   return (
     <div className="min-h-screen bg-secondary">
