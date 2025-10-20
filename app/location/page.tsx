@@ -9,85 +9,88 @@ export const metadata = {
 
 export default function LocationPage() {
   return (
-    <div className="min-h-screen bg-secondary">
-      <Header />
+    <div
+      className="min-h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: "url(/background.jpg)" }}
+    >
+      <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)]"></div>
+      <div className="relative z-10">
+        <Header />
 
-      <main className="max-w-7xl mx-auto px-6 py-8">
-        {/* Page Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground text-balance">Lokasi Pura<span style={{ color: '#B59410' }}> Dang Khayangan</span></h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-            Temukan jalan Anda ke Pura Dang Khayangan Cagar Budaya Pengukur-ukuran
-          </p>
-        </div>
+        <main className="max-w-7xl mx-auto px-6 py-8">
+          {/* Page Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white text-balance">Lokasi Pura<span style={{ color: '#B59410' }}> Dang Khayangan</span></h1>
+            <p className="text-xl text-secondary max-w-3xl mx-auto text-balance">
+              Temukan jalan Anda ke Pura Dang Khayangan Cagar Budaya Pengukur-ukuran
+            </p>
+          </div>
 
-        {/* Location Overview */}
-        <Card className="mb-8">
-          <CardContent className="p-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h2 className="text-2xl font-bold mb-4 text-foreground">Posisi Geografis</h2>
-                <p className="text-muted-foreground leading-relaxed mb-6 text-justify">
-                  Pura Dang Khayangan Cagar Budaya Pengukur-ukuran berlokasi strategis di jantung wilayah budaya Bali,
-                  terletak di antara lanskap tropis yang rimbun yang meningkatkan suasana spiritualnya. Pura ini berada
-                  di tanah yang lebih tinggi, menawarkan pengunjung pemandangan panorama sawah terasering dan desa-desa
-                  tradisional di sekitarnya.
-                </p>
+          {/* Location Overview */}
+          <Card className="mb-8 shadow-lg bg-secondary/30">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h2 className="text-2xl font-bold mb-4 text-white">Posisi Geografis</h2>
+                  <p className="text-secondary leading-relaxed mb-6 text-justify">
+                    Pura Dang Khayangan Cagar Budaya Pengukur-ukuran berlokasi strategis di jantung wilayah budaya Bali,
+                    terletak di antara lanskap tropis yang rimbun yang meningkatkan suasana spiritualnya. Pura ini berada
+                    di tanah yang lebih tinggi, menawarkan pengunjung pemandangan panorama sawah terasering dan desa-desa
+                    tradisional di sekitarnya.
+                  </p>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-semibold">Alamat</p>
-                      <p className="text-muted-foreground">Jalan Raya Pengukur-ukuran, Bali, Indonesia</p>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <MapPin className="h-5 w-5 text-white" />
+                      <div>
+                        <p className="font-semibold text-white">Alamat</p>
+                        <p className="text-secondary">Jalan Raya Pengukur-ukuran, Bali, Indonesia</p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex items-center gap-3">
-                    <Clock className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="font-semibold">Koordinat</p>
-                      <p className="text-muted-foreground">8°30'S, 115°15'E</p>
+                    <div className="flex items-center gap-3">
+                      <Clock className="h-5 w-5 text-white" />
+                      <div>
+                        <p className="font-semibold text-white">Koordinat</p>
+                        <p className="text-white">8°30'S, 115°15'E</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="relative h-80 rounded-lg overflow-hidden">
-                <img
-                  src="/placeholder.svg?key=loc1"
-                  alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
-                  className="w-full h-full object-cover"
+                <div className="relative h-80 rounded-lg overflow-hidden shadow-2xl border-white/20">
+                  <img
+                    src="/pura1.jpg"
+                    alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Interactive Map */}
+          <Card className="mb-8 shadow-lg bg-secondary/30">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold mb-6 text-white text-center">Peta Interaktif</h2>
+              <div className="relative h-128 rounded-lg overflow-hidden bg-muted">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2!2d115.25!3d-8.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzAnMDAuMCJTIDExNcKwMTUnMDAuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Peta Lokasi Pura"
                 />
               </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Interactive Map */}
-        <Card className="mb-8">
-          <CardContent className="p-8">
-            <h2 className="text-2xl font-bold mb-6 text-foreground text-center">Peta Interaktif</h2>
-            <div className="relative h-96 rounded-lg overflow-hidden bg-muted">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2!2d115.25!3d-8.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzAnMDAuMCJTIDExNcKwMTUnMDAuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Peta Lokasi Pura"
-              />
-            </div>
-            <p className="text-center text-muted-foreground mt-4">
-              Klik dan seret untuk menjelajahi area di sekitar pura
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Transportation Options */}
-        <div className="mb-12">
+              <p className="text-center text-secondary mt-4">
+                Klik dan seret untuk menjelajahi area di sekitar pura
+              </p>
+            </CardContent>
+          </Card>
+          {/* <div className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-foreground text-center">Opsi Transportasi</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-xl transition-shadow">
@@ -134,7 +137,6 @@ export default function LocationPage() {
           </div>
         </div>
 
-        {/* Nearby Attractions */}
         <Card className="mb-8 shadow-lg">
           <CardContent className="p-10">
             <h2 className="text-3xl font-bold mb-8 text-foreground text-center">
@@ -173,8 +175,6 @@ export default function LocationPage() {
             </div>
           </CardContent>
         </Card>
-
-        {/* Practical Information */}
         <div className="grid md:grid-cols-2 gap-8">
           <Card>
             <CardContent className="p-6">
@@ -201,10 +201,10 @@ export default function LocationPage() {
               </ul>
             </CardContent>
           </Card>
-        </div>
-      </main>
-
-      <Navigation currentPage="/location" />
+        </div> */}
+        </main>
+      </div>
+      {/* <Navigation currentPage="/location" /> */}
     </div>
   )
 }

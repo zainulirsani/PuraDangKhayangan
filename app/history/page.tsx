@@ -9,50 +9,53 @@ export const metadata = {
 
 export default function HistoryPage() {
   return (
-    <div className="min-h-screen bg-secondary">
-      <Header />
+    <div
+      className="min-h-screen bg-cover bg-center relative"
+      style={{ backgroundImage: "url(/background.jpg)" }}
+    >
+      <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)]"></div>
+      <div className="relative z-10">
+        <Header />
 
-      <main className="max-w-7xl mx-auto px-6 py-12">
-        {/* Page Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground text-balance">
-            Sejarah <span style={{ color: '#B59410' }}>Pura Dang Khayangan</span>
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
-            Temukan warisan yang kaya dan tradisi suci Pura Dang Khayangan Cagar Budaya Pengukur-ukuran.
-          </p>
-        </div>
-
-        {/* Origins Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <Card className="shadow-lg">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-4 text-foreground">Asal Usul Kuno</h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Pura Dang Khayangan Cagar Budaya Pengukur-ukuran menelusuri asal-usulnya kembali ke abad ke-14, selama masa keemasan pengaruh Majapahit di Bali. Pura ini didirikan sebagai tempat suci yang didedikasikan untuk pemujaan dewa-dewa Hindu dan penghormatan terhadap roh leluhur.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Nama "Pengukur-ukuran" mengacu pada sistem pengukuran tradisional yang digunakan dalam arsitektur Bali dan konstruksi pura, menyoroti signifikansi pura sebagai pusat untuk melestarikan teknik bangunan kuno dan geometri spiritual.
-              </p>
-            </CardContent>
-          </Card>
-          <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src="/ancient-balinese-temple-stone-carvings-historical-.jpg"
-              alt="Ukiran pura kuno dan artefak bersejarah"
-              className="w-full h-full object-cover"
-            />
+        <main className="max-w-7xl mx-auto px-6 py-12">
+          {/* Page Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white text-balance">
+              Sejarah <span style={{ color: '#B59410' }}>Pura Dang Khayangan</span>
+            </h1>
+            <p className="text-lg text-secondary max-w-3xl mx-auto text-balance">
+              Temukan warisan yang kaya dan tradisi suci Pura Dang Khayangan Cagar Budaya Pengukur-ukuran.
+            </p>
           </div>
-        </div>
 
-        {/* Development Timeline */}
-        <Card className="mb-16 shadow-lg">
+          {/* Origins Section */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <Card className="shadow-lg bg-secondary/30">
+              <CardContent className="p-8">
+                <h2 className="text-3xl font-bold mb-4 text-white">Asal Usul Kuno</h2>
+                <p className="text-white leading-relaxed mb-4">
+                  Pura Dang Khayangan Cagar Budaya Pengukur-ukuran menelusuri asal-usulnya kembali ke abad ke-14, selama masa keemasan pengaruh Majapahit di Bali. Pura ini didirikan sebagai tempat suci yang didedikasikan untuk pemujaan dewa-dewa Hindu dan penghormatan terhadap roh leluhur.
+                </p>
+                <p className="text-white leading-relaxed">
+                  Nama "Pengukur-ukuran" mengacu pada sistem pengukuran tradisional yang digunakan dalam arsitektur Bali dan konstruksi pura, menyoroti signifikansi pura sebagai pusat untuk melestarikan teknik bangunan kuno dan geometri spiritual.
+                </p>
+              </CardContent>
+            </Card>
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl border-white/20">
+              <img
+                src="/ancient-balinese-temple-stone-carvings-historical-.jpg"
+                alt="Ukiran pura kuno dan artefak bersejarah"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* <Card className="mb-16 shadow-lg">
           <CardContent className="p-10">
             <h2 className="text-3xl font-bold mb-10 text-foreground text-center">Garis Waktu Sejarah</h2>
             <div className="relative max-w-2xl mx-auto">
               <div className="absolute left-1/2 h-full w-0.5 bg-border -translate-x-1/2"></div>
               <div className="space-y-12">
-                {/* Abad ke-14 */}
                 <div className="relative flex items-center">
                   <div className="w-1/2 pr-8 text-right">
                      <div className="text-lg font-semibold px-4 py-2 rounded-lg inline-block" style={{ backgroundColor: 'rgba(181, 148, 16, 0.9)', color: 'white' }}>Abad ke-14</div>
@@ -65,7 +68,6 @@ export default function HistoryPage() {
                       </p>
                   </div>
                 </div>
-                {/* Abad ke-16 */}
                 <div className="relative flex items-center">
                    <div className="w-1/2 pr-8 text-right">
                       <h3 className="text-xl font-semibold mb-2">Periode Perluasan</h3>
@@ -78,7 +80,6 @@ export default function HistoryPage() {
                      <div className="text-lg font-semibold px-4 py-2 rounded-lg inline-block" style={{ backgroundColor: 'rgba(181, 148, 16, 0.9)', color: 'white' }}>Abad ke-16</div>
                   </div>
                 </div>
-                {/* Abad ke-20 */}
                 <div className="relative flex items-center">
                    <div className="w-1/2 pr-8 text-right">
                      <div className="text-lg font-semibold px-4 py-2 rounded-lg inline-block" style={{ backgroundColor: 'rgba(181, 148, 16, 0.9)', color: 'white' }}>Abad ke-20</div>
@@ -94,10 +95,10 @@ export default function HistoryPage() {
               </div>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
 
-        {/* Cultural Significance */}
-        <Card className="mb-8 shadow-lg">
+          {/* Cultural Significance */}
+          {/* <Card className="mb-8 shadow-lg">
           <CardContent className="p-10">
             <h2 className="text-3xl font-bold mb-8 text-foreground text-center">Signifikansi Budaya</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -130,10 +131,10 @@ export default function HistoryPage() {
               </div>
             </div>
           </CardContent>
-        </Card>
-      </main>
-
-      <Navigation />
+        </Card> */}
+        </main>
+      </div>
+      {/* <Navigation /> */}
     </div>
   )
 }
