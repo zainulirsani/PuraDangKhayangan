@@ -75,100 +75,49 @@ export default function VirtualTourPage() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-12 gap-8 items-start">
-              {/* Main Tour Viewer */}
-              <div className="lg:col-span-9">
-                <Card className="overflow-hidden shadow-lg bg-black/20 border-gray-700">
-                  <CardHeader className="flex flex-row items-center justify-between">
-                    <CardTitle className="flex items-center gap-2 font-semibold text-white">
-                      <Eye className="h-5 w-5" style={{ color: '#B59410' }} />
-                      {tourSpots[currentSpot].name}
-                    </CardTitle>
-                    <Badge variant="outline" className="border-yellow-500 text-yellow-500">Tampilan 360°</Badge>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <div className="relative aspect-video bg-slate-900">
-                      <img
-                        src={tourSpots[currentSpot].image}
-                        alt={tourSpots[currentSpot].name}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                        <Button
-                          onClick={togglePlay}
-                          size="icon"
-                          variant="ghost"
-                          className="bg-black/20 hover:bg-black/40 text-white w-16 h-16 rounded-full backdrop-blur-sm"
-                        >
-                          {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
-                        </Button>
-                      </div>
-                      <div className="absolute bottom-2 left-2 right-2">
-                        <div className="bg-black/50 backdrop-blur-sm rounded-md h-12 px-2 flex items-center justify-between">
-                          <div className="flex items-center">
-                            <Button onClick={togglePlay} size="icon" variant="ghost" className="text-white hover:bg-white/20">
-                              {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="h-5 w-5" />}
-                            </Button>
-                            <Button onClick={toggleMute} size="icon" variant="ghost" className="text-white hover:bg-white/20">
-                              {isMuted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
-                            </Button>
-                          </div>
-                          <div className="flex items-center">
-                            <Button size="icon" variant="ghost" className="text-white hover:bg-white/20"><RotateCcw className="h-5 w-5" /></Button>
-                            <Button size="icon" variant="ghost" className="text-white hover:bg-white/20"><ZoomOut className="h-5 w-5" /></Button>
-                            <Button size="icon" variant="ghost" className="text-white hover:bg-white/20"><ZoomIn className="h-5 w-5" /></Button>
-                            <Button size="icon" variant="ghost" className="text-white hover:bg-white/20"><Maximize className="h-5 w-5" /></Button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+            <div className="grid lg:grid-cols-3 gap-8 items-start mx-12">
+              <div className="space-y-8">
+                <img
+                  src="/image5.jpg"
+                  alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
-
-              {/* "Beside" Gallery */}
-              <div className="lg:col-span-3">
-                <Card className="shadow-lg bg-black/20 border-gray-700">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2 font-semibold text-white">
-                      <Camera className="h-5 w-5" style={{ color: '#B59410' }} />
-                      Galeri Cepat
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      {galleryImages.slice(0, 2).map((img, index) => (
-                        <div key={index} className="overflow-hidden rounded-lg cursor-pointer group">
-                          <img 
-                            src={img.src} 
-                            alt={img.alt} 
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                          />
-                        </div>
-                      ))}
-                    </div>
+              <div className="lg:col-span-2 space-y-8">
+                <Card className="shadow-lg bg-secondary/20">
+                  <CardContent className="gridgap-6 text-sm">
+                    <p className="text-white leading-relaxed text-justify mb-4">
+                      Halaman Virtual Tour Pura Dang Kahyangan Pengukur-ukuran berfungsi sebagai sarana interaktif bagi pengunjung untuk menjelajahi keindahan dan keagungan pura secara daring. Melalui tampilan panorama 360 derajat, pengguna dapat merasakan pengalaman seolah-olah berada langsung di lingkungan pura, melihat setiap sudut area suci, bangunan, dan keunikan arsitektur tradisional Bali. Fitur ini tidak hanya memberikan kemudahan bagi mereka yang belum berkesempatan berkunjung secara langsung, tetapi juga menjadi media edukatif untuk memperkenalkan nilai-nilai spiritual, sejarah, dan budaya yang melekat pada Pura Dang Kahyangan Pengukur-ukuran kepada masyarakat luas.
+                    </p>
                   </CardContent>
                 </Card>
               </div>
             </div>
-
-            {/* "Below" Gallery */}
-            <div className="mt-16">
-                <h2 className="text-3xl font-bold text-white text-center mb-8">Galeri Foto Lengkap</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {galleryImages.map((img, index) => (
-                        <div key={index} className="aspect-square overflow-hidden rounded-lg cursor-pointer group relative">
-                             <img 
-                                src={img.src} 
-                                alt={img.alt} 
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <p className="text-white text-sm font-semibold p-2 text-center">{img.alt}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <div className="grid lg:grid-cols-3 gap-8 items-start ml-72 mr-12 mt-12">
+              <div className="space-y-8">
+                <Card className="shadow-lg bg-secondary/20">
+                  <CardHeader className="gridgap-6 text-sm">
+                    <span className="text-2xl font-bold text-center text-white">Panorama 360°</span>
+                  </CardHeader>
+                </Card>
+              </div>
+              <div className="lg:col-span-2 space-y-8">
+                <Card className="shadow-lg bg-secondary/20">
+                  <CardContent className="gridgap-6 text-md text-center">
+                    <img
+                      src="/image6.jpg"
+                      alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                      onClick={() => window.open('/panorama360.html', '_blank')}
+                      className="mt-4 px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700 transition"
+                    >
+                      Mulai Tur Virtual 360°
+                    </button>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </main>

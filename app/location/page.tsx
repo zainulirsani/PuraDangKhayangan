@@ -60,7 +60,7 @@ export default function LocationPage() {
 
                 <div className="relative h-80 rounded-lg overflow-hidden shadow-2xl border-white/20">
                   <img
-                    src="/pura1.jpg"
+                    src="/image6.jpg"
                     alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
                     className="w-full h-full object-cover"
                   />
@@ -70,7 +70,7 @@ export default function LocationPage() {
           </Card>
 
           {/* Interactive Map */}
-          <Card className="mb-8 shadow-lg bg-secondary/30">
+          <Card className="mb-8 shadow-lg bg-secondary/20">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold mb-6 text-white text-center">Peta Interaktif</h2>
               <div className="relative h-128 rounded-lg overflow-hidden bg-muted">

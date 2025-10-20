@@ -29,25 +29,64 @@ export default function HistoryPage() {
           </div>
 
           {/* Origins Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <Card className="shadow-lg bg-secondary/30">
-              <CardContent className="p-8">
+          <div className="grid md:grid-cols-12 gap-12 items-center mb-6">
+            <Card className="shadow-lg bg-secondary/20 md:col-span-7">
+              <CardContent className="p-4">
                 <h2 className="text-3xl font-bold mb-4 text-white">Asal Usul Kuno</h2>
-                <p className="text-white leading-relaxed mb-4">
-                  Pura Dang Khayangan Cagar Budaya Pengukur-ukuran menelusuri asal-usulnya kembali ke abad ke-14, selama masa keemasan pengaruh Majapahit di Bali. Pura ini didirikan sebagai tempat suci yang didedikasikan untuk pemujaan dewa-dewa Hindu dan penghormatan terhadap roh leluhur.
-                </p>
-                <p className="text-white leading-relaxed">
-                  Nama "Pengukur-ukuran" mengacu pada sistem pengukuran tradisional yang digunakan dalam arsitektur Bali dan konstruksi pura, menyoroti signifikansi pura sebagai pusat untuk melestarikan teknik bangunan kuno dan geometri spiritual.
+                <p className="text-white leading-relaxed mb-4 text-justify">
+                  Berdasarkan Prasati Pengukur-Ukuran bahwasannya Pura tersebut sebelumnya
+                  bernama “DHARMMA HANYAR”. Hal ini dapat diketahui dalam kalimat
+                  “MPUNGKWING DHARMMA HANAR” yang artinya “PENDETAKU DI DHARMMA
+                  HANYAR” yang bergelar Jiwaya (MAPANJI JIWAYA). Pada jaman pemerintahan Prabu
+                  Sri Astasura Ratna Bumi Banten pada awal abad ke-14 ada keturunan dari Arya
+                  Karang Buncing yang bernama Kebo Iwa (Kebo Taruna). Beliau melamar menjadi
+                  patih di kerajaan Bedahulu namun tidak diterima begitu saja tanpa melalui ujian
+                  kesaktian terlebih dahulu
                 </p>
               </CardContent>
             </Card>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl border-white/20">
+            <div className="relative h-84 md:col-span-5 rounded-2xl overflow-hidden shadow-2xl border-white/20">
               <img
-                src="/ancient-balinese-temple-stone-carvings-historical-.jpg"
+                src="/image5.jpg"
                 alt="Ukiran pura kuno dan artefak bersejarah"
                 className="w-full h-full object-cover"
               />
             </div>
+
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl border-white/20">
+              <img
+                src="/image4.jpg"
+                alt="Ukiran pura kuno dan artefak bersejarah"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <Card className="shadow-lg bg-secondary/30">
+              <CardContent className="p-4">
+                <p className="text-white leading-relaxed text-justify mb-4">
+                  Oleh karena kesaktian Kebo Iwa diukur di Dharmma Hanar, maka dari itulah tempat
+                  tersebut sekarang bernama Pura Pengukur-Ukuran dan menurut cerita rakyat,
+                  wilayah tempat tumpukan orang-orang yang kehilangan nyawa yang telah menguji
+                  kesaktiannya disebut Sawa Gunung dan hingga sekarang wilayah ini bernama Sawa
+                  Gunung
+                </p>
+                <p className="text-white leading-relaxed">
+                  Wraspati Wage Pujut, Penanggalan Ping Lima
+                  Sasih Kawulu, Tahun 1116 Caka atau
+                  sekitar 12 Februari 1194. Dapat diindikasikan
+                  bahwasannya Pura Pengukur-Ukuran
+                  diperluas pada tahun 1116 Caka atau 1194
+                  Masehi yang diresmikan atau diplaspas oleh
+                  Pedanda Ciwa Bergelar (Mapanji) Jiwaya atau
+                  Jiwajaya.
+                </p>
+                {/* <p className="text-white leading-relaxed">
+                  Nama "Pengukur-ukuran" mengacu pada sistem pengukuran tradisional yang digunakan dalam arsitektur Bali dan konstruksi pura, menyoroti signifikansi pura sebagai pusat untuk melestarikan teknik bangunan kuno dan geometri spiritual.
+                </p> */}
+              </CardContent>
+            </Card>
           </div>
 
           {/* <Card className="mb-16 shadow-lg">

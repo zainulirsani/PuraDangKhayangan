@@ -31,7 +31,7 @@ export default function HomePage() {
             {/* Image Section */}
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20">
               <img
-                src="/beautiful-traditional-balinese-temple-with-ornate-.jpg"
+                src="/beranda.jpg"
                 alt="Pura Dang Khayangan Cagar Budaya Pengukur-ukuran"
                 className="w-full h-full object-cover"
               />
@@ -42,7 +42,7 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold mb-6 text-white leading-tight">
                 Selamat Datang di Warisan Suci{" "}
                 <span style={{ color: '#B59410' }}>
-                  Pura Dang Khayangan
+                  Pura Dhangkayangan Cagar Budaya Pengukur-Ukuran
                 </span>
               </h2>
               <p className="text-lg leading-relaxed text-gray-200 mb-6 text-justify">
