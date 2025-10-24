@@ -1,7 +1,5 @@
 import { Header } from "@/components/header"
-import { Navigation } from "@/components/navigation"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Clock, Camera, Heart, Users, Phone, Shield } from "lucide-react"
+import { Card, CardContent} from "@/components/ui/card"
 
 export const metadata = {
   title: "Informasi",
@@ -11,14 +9,13 @@ export default function InformationPage() {
   return (
     <div
       className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: "url(/background.jpg)" }}
+      style={{ backgroundImage: "url(/informasi.jpg)" }} // Ganti dengan gambar latar belakang yang sesuai
     >
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)]"></div>
       <div className="relative z-10">
         <Header />
 
         <main className="container mx-auto px-4 py-12">
-          {/* Page Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white text-balance">
               Informasi <span style={{ color: '#B59410' }}>Pengunjung</span>
@@ -30,7 +27,7 @@ export default function InformationPage() {
           <div className="grid lg:grid-cols-3 gap-8 items-start mx-24">
             <div className="space-y-8">
               <img
-                src="/image9.jpg"
+                src="/image9.jpg" // Ganti dengan gambar yang sesuai
                 alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
                 className="w-full h-full object-cover rounded-lg"
               />
@@ -55,7 +52,7 @@ export default function InformationPage() {
           <div className="grid lg:grid-cols-3 gap-8 items-start ml-48 mr-24 mt-8">
             <div className="space-y-8">
               <img
-                src="/image8.jpg"
+                src="/image8.jpg" // Ganti dengan gambar yang sesuai
                 alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
                 className="w-full h-full object-cover rounded-lg"
               />
@@ -77,7 +74,7 @@ export default function InformationPage() {
           <div className="grid lg:grid-cols-3 gap-8 items-start ml-72 mr-24 mt-8">
             <div className="space-y-8">
               <img
-                src="/image7.jpg"
+                src="/image7.jpg" // Ganti dengan gambar yang sesuai
                 alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
                 className="w-full h-full object-cover rounded-lg"
               />

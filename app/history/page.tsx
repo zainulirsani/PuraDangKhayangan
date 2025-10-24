@@ -1,7 +1,5 @@
 import { Header } from "@/components/header"
-import { Navigation } from "@/components/navigation"
 import { Card, CardContent } from "@/components/ui/card"
-import { ScrollText, PencilRuler, BookOpen } from "lucide-react" // Menggunakan ikon yang relevan
 
 export const metadata = {
   title: "Sejarah",
@@ -11,14 +9,13 @@ export default function HistoryPage() {
   return (
     <div
       className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: "url(/background.jpg)" }}
+      style={{ backgroundImage: "url(/sejarah.jpg)" }} // Ganti dengan gambar latar belakang yang sesuai
     >
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)]"></div>
       <div className="relative z-10">
         <Header />
 
         <main className="max-w-7xl mx-auto px-6 py-12">
-          {/* Page Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white text-balance">
               Sejarah <span style={{ color: '#B59410' }}>Pura Dang Khayangan</span>
@@ -47,7 +44,7 @@ export default function HistoryPage() {
             </Card>
             <div className="relative h-84 md:col-span-5 rounded-2xl overflow-hidden shadow-2xl border-white/20">
               <img
-                src="/image5.jpg"
+                src="/image5.jpg" // Ganti dengan gambar yang sesuai
                 alt="Ukiran pura kuno dan artefak bersejarah"
                 className="w-full h-full object-cover"
               />
@@ -58,7 +55,7 @@ export default function HistoryPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl border-white/20">
               <img
-                src="/image4.jpg"
+                src="/image4.jpg" // Ganti dengan gambar yang sesuai
                 alt="Ukiran pura kuno dan artefak bersejarah"
                 className="w-full h-full object-cover"
               />
@@ -82,9 +79,6 @@ export default function HistoryPage() {
                   Pedanda Ciwa Bergelar (Mapanji) Jiwaya atau
                   Jiwajaya.
                 </p>
-                {/* <p className="text-white leading-relaxed">
-                  Nama "Pengukur-ukuran" mengacu pada sistem pengukuran tradisional yang digunakan dalam arsitektur Bali dan konstruksi pura, menyoroti signifikansi pura sebagai pusat untuk melestarikan teknik bangunan kuno dan geometri spiritual.
-                </p> */}
               </CardContent>
             </Card>
           </div>

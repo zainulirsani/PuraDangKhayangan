@@ -1,63 +1,15 @@
 'use client'
 
-import { useState } from "react"
 import { Header } from "@/components/header"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import {
-  Play,
-  Pause,
-  RotateCcw,
-  ZoomIn,
-  ZoomOut,
-  Maximize,
-  Volume2,
-  VolumeX,
-  Eye,
-  Camera,
-} from "lucide-react"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+
 
 export default function VirtualTourPage() {
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [isMuted, setIsMuted] = useState(false)
-  const [currentSpot, setCurrentSpot] = useState(0)
-
-  const tourSpots = [
-    {
-      id: 0,
-      name: "Gerbang Masuk Utama",
-      description: "Gerbang masuk berornamen yang menampilkan arsitektur tradisional Bali.",
-      image: "/beautiful-traditional-balinese-temple-with-ornate-.jpg",
-    },
-    {
-      id: 1,
-      name: "Halaman Tengah",
-      description: "Area upacara utama tempat festival keagamaan berlangsung.",
-      image: "/ancient-balinese-temple-stone-carvings-historical-.jpg",
-    },
-    {
-      id: 2,
-      name: "Pelinggih Suci",
-      description: "Area paling suci dari kompleks pura, dengan patung-patung kuno.",
-      image: "/balinese-temple-architecture-traditional-construct.jpg",
-    },
-  ]
-
-  const galleryImages = [
-    { src: "/beautiful-traditional-balinese-temple-with-ornate-.jpg", alt: "Gerbang Pura" },
-    { src: "/ancient-balinese-temple-stone-carvings-historical-.jpg", alt: "Ukiran Batu Kuno" },
-    { src: "/balinese-temple-architecture-traditional-construct.jpg", alt: "Arsitektur Pura" },
-    { src: "/background.jpg", alt: "Pemandangan Pura dari Jauh" },
-  ];
-
-  const togglePlay = () => setIsPlaying(!isPlaying)
-  const toggleMute = () => setIsMuted(!isMuted)
 
   return (
     <div
       className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: "url(/background.jpg)" }}
+      style={{ backgroundImage: "url(/virtual_tour.jpg)" }} // Ganti dengan gambar latar belakang yang sesuai
     >
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)]"></div>
       <div className="relative z-10">
@@ -65,7 +17,6 @@ export default function VirtualTourPage() {
 
         <main className="container mx-auto px-4 py-12">
           <div className="max-w-7xl mx-auto">
-            {/* Page Header */}
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Virtual Tour <span style={{ color: '#B59410' }}>Pura</span>
@@ -78,7 +29,7 @@ export default function VirtualTourPage() {
             <div className="grid lg:grid-cols-3 gap-8 items-start mx-12">
               <div className="space-y-8">
                 <img
-                  src="/image5.jpg"
+                  src="/image5.jpg" // Ganti dengan gambar yang sesuai
                   alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
                   className="w-full h-full object-cover rounded-lg"
                 />
@@ -105,7 +56,7 @@ export default function VirtualTourPage() {
                 <Card className="shadow-lg bg-secondary/20">
                   <CardContent className="gridgap-6 text-md text-center">
                     <img
-                      src="/image6.jpg"
+                      src="/image6.jpg" // Ganti dengan gambar yang sesuai
                       alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
                       className="w-full h-full object-cover"
                     />

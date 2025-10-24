@@ -2,10 +2,6 @@
 
 import { useEffect } from "react"
 import { Header } from "@/components/header"
-import { Navigation } from "@/components/navigation"
-import { Card, CardContent } from "@/components/ui/card"
-// Impor ikon yang sudah diperbaiki
-import { Landmark, ScrollText, Leaf } from "lucide-react"
 
 export default function HomePage() {
   useEffect(() => {
@@ -19,7 +15,7 @@ export default function HomePage() {
   return (
     <div
       className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: "url(/background.jpg)" }}
+      style={{ backgroundImage: "url(/beranda2.jpg)" }} // Ganti dengan gambar latar belakang yang sesuai
     >
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.5)]"></div>
       <div className="relative z-10">
@@ -31,13 +27,11 @@ export default function HomePage() {
             {/* Image Section */}
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20">
               <img
-                src="/beranda.jpg"
+                src="/beranda.jpg" // Ganti dengan gambar yang sesuai
                 alt="Pura Dang Khayangan Cagar Budaya Pengukur-ukuran"
                 className="w-full h-full object-cover"
               />
             </div>
-
-            {/* Description Section */}
             <div className="text-left">
               <h2 className="text-4xl font-bold mb-6 text-white leading-tight">
                 Selamat Datang di Warisan Suci{" "}
@@ -45,12 +39,7 @@ export default function HomePage() {
                   Pura Dhangkayangan Cagar Budaya Pengukur-Ukuran
                 </span>
               </h2>
-              <p className="text-lg leading-relaxed text-gray-200 mb-6 text-justify">
-                Temukan kekayaan warisan budaya Pura Dang Khayangan Cagar Budaya Pengukur-ukuran, sebuah pura suci yang berdiri sebagai bukti kemahiran arsitektur Bali dan pengabdian spiritual. Tempat suci kuno ini telah dilestarikan dengan hati-hati sebagai situs warisan budaya, menawarkan pengunjung sekilas tradisi dan kepercayaan mendalam yang telah membentuk budaya Bali selama berabad-abad.
-              </p>
-              <p className="text-lg leading-relaxed text-gray-200 text-justify">
-                Jelajahi sejarah pura yang menarik, pelajari tentang signifikansinya dalam budaya Hindu Bali, dan rasakan suasana sakral melalui tur virtual komprehensif kami.
-              </p>
+              
             </div>
           </div>
           {/* <div className="grid md:grid-cols-3 gap-8">

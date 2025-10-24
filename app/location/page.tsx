@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
-import { Navigation } from "@/components/navigation"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Clock, Car, Bus, Trees, ShoppingBasket, Mountain } from "lucide-react"
+import { MapPin, Clock, } from "lucide-react"
 
 export const metadata = {
   title: "Lokasi",
@@ -11,7 +10,7 @@ export default function LocationPage() {
   return (
     <div
       className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: "url(/background.jpg)" }}
+      style={{ backgroundImage: "url(/lokasi.jpg)" }} // Ganti dengan gambar latar belakang yang sesuai
     >
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)]"></div>
       <div className="relative z-10">
@@ -60,7 +59,7 @@ export default function LocationPage() {
 
                 <div className="relative h-80 rounded-lg overflow-hidden shadow-2xl border-white/20">
                   <img
-                    src="/image6.jpg"
+                    src="/image6.jpg" // Ganti dengan gambar yang sesuai
                     alt="Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya"
                     className="w-full h-full object-cover"
                   />
@@ -75,7 +74,7 @@ export default function LocationPage() {
               <h2 className="text-2xl font-bold mb-6 text-white text-center">Peta Interaktif</h2>
               <div className="relative h-128 rounded-lg overflow-hidden bg-muted">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2!2d115.25!3d-8.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzAnMDAuMCJTIDExNcKwMTUnMDAuMCJF!5e0!3m2!1sen!2sid!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.1640548586734!2d115.29996787401767!3d-8.507063591534928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd217da55555555%3A0x7c3bc3cdae06eb33!2sPura%20Pengukur%20Ukuran!5e1!3m2!1sid!2sid!4v1761136344735!5m2!1sid!2sid"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -83,7 +82,15 @@ export default function LocationPage() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Peta Lokasi Pura"
-                />
+                /> // Ganti dengan peta interaktif yang sesuai
+                {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.1640548586734!2d115.29996787401767!3d-8.507063591534928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd217da55555555%3A0x7c3bc3cdae06eb33!2sPura%20Pengukur%20Ukuran!5e1!3m2!1sid!2sid!4v1761136344735!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen 
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade">  
+                </iframe> */}
               </div>
               <p className="text-center text-secondary mt-4">
                 Klik dan seret untuk menjelajahi area di sekitar pura
